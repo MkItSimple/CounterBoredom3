@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CounterBoredom3</string>
+    <string name="todo">TODO</string>
+    <string name="back_to_registration">Back to registration</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="LATEST_CHATS">LATEST CHATS</string>
+    <string name="FRIENDS_LIST">FRIENDS LIST</string>
+    <string name="logout">Logout</string>
+    <string name="my_profile">My Profile</string>
+
+    <string name="LoginError">Please fill out email/pw.</string>
+</resources>
