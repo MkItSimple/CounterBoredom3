@@ -24,6 +24,7 @@ import com.mkitsimple.counterboredom.viewmodels.ViewModelFactory
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Job
+import org.jetbrains.anko.intentFor
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -63,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         view_pager.setAdapter(viewPagerAdapter)
 
         circleImageViewMain.setOnClickListener {
-            //startActivity(intentFor<ProfileActivity>())
+            startActivity(intentFor<ProfileActivity>())
         }
     }
 
@@ -139,4 +140,10 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    override fun onResume() {
+        super.onResume()
+        fetchCurrentUser()
+    }
+
 }

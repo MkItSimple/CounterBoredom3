@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mkitsimple.counterboredom.ui.main.ProfileActivity">
+
+    tools:context=".ui.main.ProfileActivity"
+    android:background="@drawable/background_primary_gradient">
+
+    <Toolbar
+        android:id="@+id/profileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileBackArrow"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+    </Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageViewProfile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/profile_white"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileToolbar"
+        />
+
+    <EditText
+        android:id="@+id/editTextProfile"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backround_profile_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageViewProfile" />
+
+    <Button
+        android:id="@+id/buttonSaveChanges"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="Save Changes"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProfile"
+        android:background="@drawable/form_button_background_dark" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

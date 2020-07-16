@@ -2,9 +2,13 @@
     <string name="app_name">CounterBoredom3</string>
     <string name="todo">TODO</string>
     <string name="back_to_registration">Back to registration</string>
+
+    <string name="username">Username</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="email">Email</string>
+    <string name="register">Register</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -15,4 +19,10 @@
     <string name="my_profile">My Profile</string>
 
     <string name="LoginError">Please fill out email/pw.</string>
+    <string name="please_fill_out_username">Please fill out username</string>
+    <string name="username_must_be_more_than_2_characters">Username must be more than 2 characters</string>
+    <string name="username_should_not_be_more_than_20_characters">Username should not be more than 20 characters</string>
+    <string name="there_is_no_changes_has_been_made">There is no changes has been made</string>
+
+    <string name="Profile_successfully_updated">Profile successfully updated!</string>
 </resources>
