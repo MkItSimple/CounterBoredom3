@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:background="@color/transparent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageViewLatestChats"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/transparent"
+        android:src="@drawable/profile_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textViewUsernameLatestChats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/user_name"
+        android:textColor="@color/transparent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/circleImageViewLatestChats"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textViewMessageLatestMessage"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="40dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/some_latest_chats_here"
+        android:textColor="@color/colorTextBlackLight"
+        android:textSize="14sp"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/circleImageViewLatestChats"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsernameLatestChats"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

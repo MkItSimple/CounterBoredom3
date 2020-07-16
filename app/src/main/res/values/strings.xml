@@ -25,4 +25,6 @@
     <string name="there_is_no_changes_has_been_made">There is no changes has been made</string>
 
     <string name="Profile_successfully_updated">Profile successfully updated!</string>
+    <string name="user_name">User Name</string>
+    <string name="some_latest_chats_here">Some latest chats here</string>
 </resources>

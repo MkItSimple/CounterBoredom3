@@ -16,7 +16,7 @@ import dagger.Subcomponent
 interface MainComponent {
     fun inject(mainActivity: MainActivity)
     fun inject(profileActivity: ProfileActivity)
-//    fun inject(friendsListFragment: FriendsListFragment)
+    fun inject(friendsListFragment: FriendsListFragment)
 //    fun inject(latestChatsFragment: LatestChatsFragment)
 //    fun inject(chatLogActivity: ChatLogActivity)
 }
