@@ -1,11 +1,11 @@
 package com.mkitsimple.counterboredom.ui.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.annotation.Nullable
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -20,7 +20,6 @@ import com.mkitsimple.counterboredom.R
 import com.mkitsimple.counterboredom.data.models.User
 import com.mkitsimple.counterboredom.ui.auth.LoginActivity
 import com.mkitsimple.counterboredom.ui.auth.RegisterActivity
-import com.mkitsimple.counterboredom.utils.toast
 import com.mkitsimple.counterboredom.viewmodels.ViewModelFactory
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
@@ -50,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this, factory)[MainViewModel::class.java]
         verifyUserIsLoggedIn()
 
+        toolbar.setTitle("")
+        setSupportActionBar(toolbar)
+
         val latestChatsFragment = LatestChatsFragment()
         val friendsFragment = FriendsListFragment()
 
@@ -74,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         val id = item.itemId
         if (id == R.id.menu_logout) {
             FirebaseAuth.getInstance().signOut()
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }

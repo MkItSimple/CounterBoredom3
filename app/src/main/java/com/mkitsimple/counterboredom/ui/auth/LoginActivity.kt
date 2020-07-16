@@ -2,17 +2,20 @@ package com.mkitsimple.counterboredom.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.google.firebase.auth.FirebaseAuth
 import com.mkitsimple.counterboredom.BaseApplication
 import com.mkitsimple.counterboredom.R
 import com.mkitsimple.counterboredom.ui.main.MainActivity
+import com.mkitsimple.counterboredom.utils.Coroutines
+import com.mkitsimple.counterboredom.utils.longToast
 import com.mkitsimple.counterboredom.viewmodels.ViewModelFactory
 import kotlinx.android.synthetic.main.activity_login.*
+import org.jetbrains.anko.clearTask
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.newTask
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
@@ -62,27 +65,30 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener {
-                if (!it.isSuccessful) return@addOnCompleteListener
-                val intent = Intent(this, MainActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, "Failed to log in: ${it.message}", Toast.LENGTH_SHORT).show()
-            }
+//        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+//            .addOnCompleteListener {
+//                if (!it.isSuccessful) return@addOnCompleteListener
+//                val intent = Intent(this, MainActivity::class.java)
+//                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+//                startActivity(intent)
+//            }
+//            .addOnFailureListener {
+//                Toast.makeText(this, "Failed to log in: ${it.message}", Toast.LENGTH_SHORT).show()
+//            }
 
-//        Coroutines.main {
-//            viewModel.performLogin(email, password)
-//            viewModel.loginResult?.observe(this, Observer {
-//                if (it == true) {
-//                    startActivity(intentFor<MainActivity>().clearTask().newTask())
-//                    //longToast(it.toString())
-//                } else {
-//                    longToast(it.toString())
-//                }
-//            })
-//        }
+        Coroutines.main {
+            viewModel.performLogin(email, password)
+            viewModel.loginResult?.observe(this, Observer {
+                if (it == true) {
+                    startActivity(intentFor<MainActivity>().clearTask().newTask())
+                    //longToast(it.toString())
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+//                    startActivity(intent)
+                } else {
+                    longToast(it.toString())
+                }
+            })
+        }
     }
 }
