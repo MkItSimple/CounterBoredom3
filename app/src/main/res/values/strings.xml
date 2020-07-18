@@ -18,13 +18,26 @@
     <string name="logout">Logout</string>
     <string name="my_profile">My Profile</string>
 
+    <string name="PleaseFillOutUsername">Please fill out username</string>
+    <string name="PleaseFillOutEmail">Please fill out email</string>
+    <string name="PleaseFillOutPassword">Please fill out password</string>
+
     <string name="LoginError">Please fill out email/pw.</string>
     <string name="please_fill_out_username">Please fill out username</string>
     <string name="username_must_be_more_than_2_characters">Username must be more than 2 characters</string>
     <string name="username_should_not_be_more_than_20_characters">Username should not be more than 20 characters</string>
     <string name="there_is_no_changes_has_been_made">There is no changes has been made</string>
+    <string name="_7_30_pm">7:30 PM</string>
+    <string name="lorem">This is my message that will wrap into multipole lines and keep on going multipole lines and keep on going multipole lines and keep on going multipole lines and keep on going</string>
+    <string name="ImageSaved">Image Saved!</string>
 
     <string name="Profile_successfully_updated">Profile successfully updated!</string>
     <string name="user_name">User Name</string>
     <string name="some_latest_chats_here">Some latest chats here</string>
+    <string name="your_message">Your message…</string>
+    <string name="save_image">Save Image</string>
+    <string name="cancel">Cancel</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="no_new_messages">No new messages \n\n Chat your friends! :)</string>
 </resources>

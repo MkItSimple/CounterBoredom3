@@ -64,8 +64,6 @@ class FriendsListFragment : Fragment() {
         val ref = FirebaseDatabase.getInstance().getReference("/users")
         ref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                val uid = FirebaseAuth.getInstance().uid
-
                 if (snapshot.exists()) {
                     setupRecyclerView(snapshot)
                 }

@@ -1,13 +1,31 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mkitsimple.counterboredom.ui.main.LatestChatsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.LatestChatsFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewLatestChats"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
+        android:id="@+id/textViewNoChats"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Latest Chats" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/no_new_messages"
+        android:fontFamily="@font/montserrat_light"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

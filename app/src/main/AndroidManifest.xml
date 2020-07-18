@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ui.main.ProfileActivity"></activity>
+        <activity android:name=".ui.main.PracticeLayoutActivity"></activity>
+        <activity android:name=".ui.main.ViewImageActivity" />
+        <activity android:name=".ui.main.ProfileActivity" />
         <activity android:name=".ui.main.ChatLogActivity" />
         <activity android:name=".ui.auth.LoginActivity" />
         <activity android:name=".ui.auth.RegisterActivity" />
@@ -28,11 +30,14 @@
             android:name=".ui.main.MainActivity"
             android:theme="@style/AppTheme" />
 
-        <service android:name=".ui.MyFirebaseMessagingService">
+        <service
+            android:name=".ui.MyFirebaseMessagingService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service> <!-- Setup notification icon and icon color -->
+        </service>
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/cb_logo" />

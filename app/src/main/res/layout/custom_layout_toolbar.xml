@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/backArrow"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/customToolbarChatLogCircleImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/profile_default" />
+
+        <TextView
+            android:id="@+id/customToolbarChatLogTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/user_name"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+    </Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

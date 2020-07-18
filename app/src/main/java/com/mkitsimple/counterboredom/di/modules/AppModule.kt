@@ -13,19 +13,21 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
 class AppModule {
-    @AppScope
-    @Provides
-    fun provideRetrofit() =
-            Retrofit.Builder()
-                    .addConverterFactory(GsonConverterFactory.create())
-//    @AppScope
-//    @Provides
-//    fun provideFeedService(builder: Retrofit.Builder) =
-//            builder.baseUrl(BASE_URL).build().create(Api::class.java)
 
     @AppScope
     @Provides
     fun provideApi() = Api::class.java
+
+    @AppScope
+    @Provides
+    fun provideRetrofit() =
+        Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+
+    @AppScope
+    @Provides
+    fun provideFeedService(builder: Retrofit.Builder) =
+        builder.baseUrl(BASE_URL).build().create(Api::class.java)
 
     @AppScope
     @Provides
